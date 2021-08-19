@@ -55,7 +55,6 @@ function Home(props) {
 
 export default Home;
 
-'use strict';
 
 
 const React = require('react');
