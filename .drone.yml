@@ -1,0 +1,11 @@
+kind:
+type:
+name: default
+
+steps:
+  - name: test
+    image: gradle:7.2.0-jdk11
+    commands:
+      - gradle build
+      - gradle test
+      - gradle bootRun

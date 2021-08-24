@@ -7,13 +7,14 @@ public class DatabaseLoader implements CommandLineRunner{
 
     private final UserRepository repository;
 
-    @Autowired // <3>
+    @Autowired
     public DatabaseLoader(UserRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public void run(String... strings) throws Exception { // <4>
+    public void run(String... strings) {
         this.repository.save(new User("Frodo", "Baggins", "ring bearer"));
+        Iterable<User> user = this.repository.findAll();
     }
 }
